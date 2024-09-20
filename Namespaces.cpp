@@ -21,7 +21,7 @@ int main()
   using namespace first;
   std::cout << "printing x using the using namespace keyword: " << x << '\n';
 
-  // creating local variable. This varaible will take priority.
+  // creating local variable. This variable will take priority.
   int x = 0;
 
   // Since we did not directly state which namespace we are using for x it will
@@ -37,7 +37,7 @@ int main()
 
 
   // some people use this syntax which cuts down on some of the writing. However,
-  // it is better to use the orginal std::string name = "bro";
+  // it is better to use the original std::string name = "bro";
   using std::cout;
   using std::string;
   

@@ -23,14 +23,26 @@ int main()
   arrayWithSize[3] = 4;
   arrayWithSize[4] = 5;
 
-  // array iteration
+  // array iteration with for-loop
   cout << "\nArray Iteration " << endl;
   for(int i = 0; i < 5; i++)
   {
     cout << arrayWithSize[i] << endl;
   }
 
-  // Array iteration For-loop
+  // Array iteration For each-loop
+
+
+  // Heap memory array (heap allocated array)
+
+
+  // With this array the size does not need to be specified at compile time. Notice how I am able to compile the size variable and then use that for my heapArray. You wont be able
+  // to do this using a normal stack array. There is an exception and that is that I can do this using a stack array since of my compiler, but c++ original does not let you do this.
+  int size = 5;
+  int* heapArray = new int[size];
+  
+  delete[] heapArray; // Must delete after use to collect unused data and free up heap memory.
+
 
   // Array iteration using pointers
   
