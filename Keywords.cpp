@@ -17,7 +17,10 @@ int main()
     
     // nullptr - a keyword that works the same as null except it is used to specifically assign pointers to null
     
+    // virtual - A keyword used when using abstraction in classes. It is used to 
+    //           denote a method is abstract and must be implemented in a sub-class
 
+    
 
 
     
