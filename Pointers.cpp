@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 int main()
 {
@@ -13,7 +14,7 @@ int main()
 
   // Example of usage - If you have a stack of pizza and want to give your neighbors
   //                    pizza, it is easier to go door to door and tell people the
-  //                    [address] of where the pizza is located instead of carring
+  //                    [address] of where the pizza is located instead of caring
   //                    the stack of pizza door to door.
 
   // & address-of operator
@@ -60,6 +61,29 @@ int main()
 
 
 
+  // Cherno Pointer video
+  std::cout << "\n\nCherno Pointer video" << "\n";
+
+  // void* ptr = 0; // This is the same as null
+  // void* ptr = NULL; // You can use nullptr which was made specific for holding null pointers
+  void*ptr = nullptr;
+
+  int var = 8;
+  int *varP = &var;
+  *varP = 10;
+
+  std::cout << var << '\n';
+
+  // This was all created on the stack now this will show an example of creating memory on the heap
+
+  char* buffer = new char[8]; // This just allocated 8 bytes of memory into the heap and gives us the pointer of the beginning of that memory
+  memset(buffer, 0, 8); // A function from the cstring header which fills in the memory with data that we specify. So this fills the 8 bytes of memory with 0.
+
+
+  char** bufferPtr = &buffer; // This is a double pointer since buffer is already a pointer and I am creating a bufferPtr which is another pointer to the buffer pointer.
+  //                             Example: bufferPtr -> buffer -> 8 bytes of allocated memory  
+
+  delete[] buffer; // Deletes/deallocates the memory from the heap.
 
   return 0;
 }
