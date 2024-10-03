@@ -1,5 +1,11 @@
 #include <iostream>
 
+
+
+
+const int X = 15; // A global variable that is const
+
+
 // Example of const in functions of classes
 class Family
 {
@@ -16,6 +22,9 @@ class Family
 // Declared function
 void printInfo(const std::string &name, const int &age);
 
+// Decalred function
+void printGlobalVariable(const int& X) const;
+
 
 int main()
 {
@@ -26,6 +35,7 @@ int main()
   // make these constant to keep the variables from changing.
   const double PI = 3.14;
   const double RADIUS = 10;
+  #define kCardSize = 52; // Another way to define a const
 
   // Calculatin circumference using the two constants
   double circumference = 2 * PI * RADIUS;
@@ -44,6 +54,7 @@ int main()
   printInfo("Bob", 21);
 
 
+  printGlobalVariable(X);
 
 
 
@@ -58,3 +69,9 @@ void printInfo(const std::string &name, const int &age)
     std::cout << name << '\n';
     std::cout << age << '\n';
 };
+
+ // You cannot apply const on global variables and must use it inside object functions.
+void printGlobalVariable(const int& X) const
+{
+  std::cout << X << "\n";
+}

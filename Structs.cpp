@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// Example of struct. Can be used as data type.
+// Example of struct. Can be used as data types.
 struct student 
 {
     string name; // name is declared but not initalized therefore needs to be manually set
