@@ -4,6 +4,9 @@ int main()
 {
   // Switch cases
 
+  bool x = 5>5;
+  std::cout << x;
+
   int month;
   std::cout << "Enter the month (1-12): ";
   std::cin >> month;
