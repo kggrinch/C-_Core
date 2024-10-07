@@ -1,8 +1,5 @@
 #include <iostream>
 
-
-
-
 const int X = 15; // A global variable that is const
 
 
